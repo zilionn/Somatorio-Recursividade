@@ -7,12 +7,11 @@ public class SomatorioController {
 	}
 	
 	public int somatorio(int n) {
-		// Condição de parada: Quando N for menor ou igual a 0, desta forma, irá parar sua execução quando N chegar em 0 ou se o número inicial for negativo/0
+		// condição de parada - quando N for <= a 0; começará de um número X e irá parar quando chegar em 0.
 		if (n <= 0) {
 			return 0;
 		}
-		// Relação de chamada dos passos: Somar elemento atual com a chamada da função de seu anterior -> N + N-1 + N-2 + ... + 0 (Condição de parada)
+		// relação de chamada dos passos - somar um elemento N com a função do anterior.
 		return n + somatorio(n - 1);
 	}
-
 }
